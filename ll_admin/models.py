@@ -79,7 +79,7 @@ class CardDetail(models.Model):
 
 class RegisterUser(models.Model):
     # userid
-    cardId = models.CharField(primary_key=True, max_length=30, auto_created=True)
+    userId = models.AutoField(primary_key=True)
     # 姓名
     name = models.CharField(default='', max_length=30)
     # 年龄

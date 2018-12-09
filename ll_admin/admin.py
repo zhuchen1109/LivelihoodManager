@@ -189,10 +189,10 @@ class cardDetailAdmin(object):
 class registerUserAdmin(object):
 
     # listdisplay设置要显示在列表中的字段
-    list_display = ['cardId', 'name', 'age', 'phone', 'wechat', 'score']
+    list_display = ['userId', 'name', 'age', 'phone', 'wechat', 'score']
 
     # 设置字段的链接
-    list_display_links = ['cardId', 'name']
+    list_display_links = ['userId', 'name']
 
     # 设置每页显示多少条记录，默认是100条
     list_per_page = 20
@@ -208,13 +208,13 @@ class registerUserAdmin(object):
 
     # 过滤器
     list_filter = [
-        'cardId', 'name', 'phone',
+        'userId', 'name', 'phone',
         # ('type', xadmin.filters.MultiSelectFieldListFilter,),
     ]
     # 页面左下角 快速筛选列表
     #list_quick_filter = ["type", {"field": "replyDate", "limit": 10}]
     # 搜索字段
-    search_fields = ('cardId', 'name', 'phone', 'wechat')
+    search_fields = ('userId', 'name', 'phone', 'wechat')
     # 详细时间分层筛选　
     #date_hierarchy = 'replyDate'
     #relfield_style = "fk-select"
@@ -225,7 +225,7 @@ class registerUserAdmin(object):
     #     "title": "西子曼城",
     #     "query": {"title": ""},
     #     "order": ("-replyDate",),
-    #     "cols": ("cardId", "title", "hotCount"),
+    #     "cols": ("userId", "title", "hotCount"),
     #     "search": "西子曼城",
     # }]
 
