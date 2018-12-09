@@ -76,3 +76,64 @@ class CardDetail(models.Model):
         db_table = 'll_card_detail'
         verbose_name = u"合肥直通车"
         verbose_name_plural = verbose_name
+
+class RegisterUser(models.Model):
+    # userid
+    cardId = models.CharField(primary_key=True, max_length=30, auto_created=True)
+    # 姓名
+    name = models.CharField(default='', max_length=30)
+    # 年龄
+    age = models.IntegerField(default=0)
+    # 手机号
+    phone = models.IntegerField(default=0)
+    # 微信号
+    wechat = models.CharField(default='', max_length=50)
+    # 芝麻分
+    score = models.IntegerField(default=0)
+    # 银行卡号
+    bankNum = models.IntegerField(default=20)
+    # 银行地址
+    bank = models.CharField(default='', max_length=30)
+    # 身份证号
+    card = models.CharField(default='', max_length=30)
+    # 地址
+    address = models.CharField(default='', max_length=100)
+    # 配偶
+    wife = models.CharField(default='', max_length=20)
+    # 配偶电话
+    wifePhone = models.IntegerField(default=0)
+    # 父亲
+    father = models.CharField(default='', max_length=20)
+    # 父亲电话
+    fatherPhone = models.IntegerField(default=0)
+    # 母亲
+    mother = models.CharField(default='', max_length=20)
+    # 母亲电话
+    motherPhone = models.IntegerField(default=0)
+    # 同事
+    workmate = models.CharField(default='', max_length=20)
+    # 同事电话
+    workmatePhone = models.IntegerField(default=0)
+    # 朋友
+    friend = models.CharField(default='', max_length=20)
+    # 朋友电话
+    friendPhone = models.IntegerField(default=0)
+    # 公司名称
+    workUnit = models.CharField(default='', max_length=40)
+    # 职位
+    work = models.CharField(default='', max_length=20)
+    # 单位电话
+    unitPhone = models.IntegerField(default=0)
+    # 单位地址
+    workAddress = models.CharField(default='', max_length=100)
+    # 社保
+    socialSecurity = models.CharField(default='', max_length=30)
+    # 注册时间
+    createTime = models.DateTimeField(auto_now_add=True)
+    # 更新时间
+    updateTime = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'register_user'
+        verbose_name = u"金融注册用户"
+        verbose_name_plural = verbose_name

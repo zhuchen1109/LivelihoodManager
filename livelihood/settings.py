@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'livelihood.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
+        'HOST': '140.143.36.84',
         'POST': '3306',
         'USER': 'root',
         'PASSWORD': 'root',
@@ -109,7 +109,8 @@ USE_L10N = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = '/usr/local/var/www/livelihood/static/'
+STATIC_ROOT = '/var/www/livelihood/static/'
+#STATIC_ROOT = '/usr/local/var/www/livelihood/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
