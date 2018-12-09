@@ -189,10 +189,10 @@ class cardDetailAdmin(object):
 class registerUserAdmin(object):
 
     # listdisplay设置要显示在列表中的字段
-    list_display = ['card_id', 'name', 'age', 'phone', 'wechat', 'score']
+    list_display = ['cardId', 'name', 'age', 'phone', 'wechat', 'score']
 
     # 设置字段的链接
-    list_display_links = ['card_id', 'name']
+    list_display_links = ['cardId', 'name']
 
     # 设置每页显示多少条记录，默认是100条
     list_per_page = 20
