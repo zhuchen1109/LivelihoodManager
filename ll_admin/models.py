@@ -85,13 +85,13 @@ class RegisterUser(models.Model):
     # 年龄
     age = models.IntegerField(default=0)
     # 手机号
-    phone = models.IntegerField(default=0)
+    phone = models.CharField(default='', max_length=30)
     # 微信号
     wechat = models.CharField(default='', max_length=50)
     # 芝麻分
     score = models.IntegerField(default=0)
     # 银行卡号
-    bankNum = models.IntegerField(default=20)
+    bankNum = models.CharField(default='', max_length=30)
     # 银行地址
     bank = models.CharField(default='', max_length=30)
     # 身份证号
@@ -101,29 +101,29 @@ class RegisterUser(models.Model):
     # 配偶
     wife = models.CharField(default='', max_length=20)
     # 配偶电话
-    wifePhone = models.IntegerField(default=0)
+    wifePhone = models.CharField(default='', max_length=30)
     # 父亲
     father = models.CharField(default='', max_length=20)
     # 父亲电话
-    fatherPhone = models.IntegerField(default=0)
+    fatherPhone = models.CharField(default='', max_length=30)
     # 母亲
     mother = models.CharField(default='', max_length=20)
     # 母亲电话
-    motherPhone = models.IntegerField(default=0)
+    motherPhone = models.CharField(default='', max_length=30)
     # 同事
     workmate = models.CharField(default='', max_length=20)
     # 同事电话
-    workmatePhone = models.IntegerField(default=0)
+    workmatePhone = models.CharField(default='', max_length=30)
     # 朋友
     friend = models.CharField(default='', max_length=20)
     # 朋友电话
-    friendPhone = models.IntegerField(default=0)
+    friendPhone = models.CharField(default='', max_length=30)
     # 公司名称
     workUnit = models.CharField(default='', max_length=40)
     # 职位
     work = models.CharField(default='', max_length=20)
     # 单位电话
-    unitPhone = models.IntegerField(default=0)
+    unitPhone = models.CharField(default='', max_length=30)
     # 单位地址
     workAddress = models.CharField(default='', max_length=100)
     # 社保
